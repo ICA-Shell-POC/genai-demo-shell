@@ -1,15 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Dashboard from './Dashboard';
-import BarChart from './BarChart';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Dashboard from './Dashboard'; // Adjust the import path as necessary
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Dashboard />
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        {/* Add other routes here */}
+      </Routes>
+    </Router>
   );
 }
 

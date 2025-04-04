@@ -5,6 +5,8 @@ import BarChart from './BarChart';
 import LineChart from './LineChart';
 import './Dashboard.css';
 import { Colors } from 'chart.js';
+import FuelSalesChart from './FuelSalesChart';
+import PeakHoursAndSalesChart from './PeakHourSalesData';
 
 const Dashboard = () => {
 
@@ -31,7 +33,10 @@ const Dashboard = () => {
         </div>
         <div>
           <h2 style={{color: 'black'}}>Peak Hour Data</h2>
-          <LineChart data={data} />
+          {/* <LineChart data={data} /> */}
+          {data &&
+          <PeakHoursAndSalesChart />
+}
         </div>
       </div>
     </div>
